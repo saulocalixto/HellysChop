@@ -1,0 +1,19 @@
+﻿@model HelloWorld.Models.ItemModel
+
+    <div class="campoNome">
+        <div class="campoInformacaoNome">@Model.Nome</div>
+    </div>
+    <div class="wrapDescricao">
+        <div class="campo">
+            <div class="campoInformacao">@Model.Descricao</div>
+        </div>
+        <br />
+        <div class="campo">
+            <div class="campoInformacao">H$@Model.Preco</div>
+        </div>
+        <br />
+        <div class="acoes">
+            <span class="editar">@Html.ActionLink("Editar", "Edit", new { Codigo = @Model.Codigo }) ||</span>
+            <span class="editar">@Html.ActionLink("Excluir", "Delete", new { Codigo = @Model.Codigo })</span>
+        </div>
+    </div>

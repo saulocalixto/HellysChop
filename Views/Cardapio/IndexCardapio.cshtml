@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Cardápio";
+}
+
+@using HelloWorld.Models
+@model ItemModel
+
+<h1>Hellys Cardápio</h1>
+
+@section voltar
+    {
+        <div class="link-voltar">@Html.ActionLink("Voltar", "Index", "Home")</div>
+    }
+
+<br />
+
+<div class="bloco">
+
+    <div class="produtos">
+
+        <div class="produto">
+            <img src="http://www.ocontadordecervejas.com.br/arquivos/uploads/2012/04/03-224x300.jpg" class="imagem" />
+
+            <div class="itens">
+                <div id="buttom-beer">
+                    <div class="item-menu"><a href="javascript:void(0);">Hellys Beer</a></div>
+                </div>
+                <div class="item-preco" id="beer">H$ 15 Hellys</div>
+             </div>
+        </div>
+
+        <br />
+
+        <div class="produto">
+            <img src="http://cafecommanteiga.com/wp-content/uploads/2014/06/suco_post.jpg" class="imagem" />
+        
+            <div class="itens">
+                <div id="buttom-suco">
+                    <div class="item-menu"><a href="javascript:void(0);" onclick="ShowBox();">Hellys Suco de Fruta</a></div>
+                </div>
+                <div class="item-preco" id="suco">H$ 7 Hellys</div>
+             </div>
+
+        </div>
+
+        <br />
+
+        <div class="produto">
+            <img src="http://www.ultracurioso.com.br/wp-content/uploads/2015/09/186.jpg" class="imagem" />
+        
+            <div class="itens">
+                <div id="buttom-burger">
+                    <div class="item-menu"><a href="javascript:void(0);" onclick="ShowBox();">Hellys Burger</a></div>
+                </div>
+                <div class="item-preco" id="burger">H$ 20 Hellys</div>
+             </div>
+
+        </div>
+
+        <br />
+
+        <div class="produto">
+            <img src="http://barsaideira.com.br/arquivos/comideira/batata.jpg" class="imagem" />
+        
+            <div class="itens">
+                <div id="buttom-fritas">
+                    <div class="item-menu"><a href="javascript:void(0);" onclick="ShowBox();">Hellys Fritas</a></div>
+                </div>
+                <div class="item-preco" id="fritas">H$ 12 Hellys</div>
+             </div>
+
+            @using (Html.BeginForm())
+            { 
+
+                    <div class="itens">
+                        <div id="buttom-fritas">
+                            <div class="item-menu"><a href="javascript:void(0);" onclick="ShowBox();"><input type="text" name="Nome" value="@Html.DisplayTextFor(x => x.Nome)" /></a></div>
+                        </div>
+                        <div class="item-preco" id="fritas">H$ 12 Hellys</div>
+                    </div>
+            }
+
+        </div>
+    </div>
+
+<div class="botaoAdd"><input type="button" value="Adicionar" onclick="location.href='@Url.Action("Index", "Item")'"/> </td></div>
+
+</div>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "IndexCadastroItem";
+}
+
+@using HelloWorld.Models
+@model ItemModel
+
+<h1>Cadastrar Novo Hellys Produto</h1>
+
+@section voltar
+    {
+    <div class="link-voltar">@Html.ActionLink("Voltar", "Index", "Home")</div>
+}
+    
+@using (Html.BeginForm())
+{
+    @Html.Partial("_campos", Model)
+
+    <input class="botao" type="submit" value="Salvar" />
+}

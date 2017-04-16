@@ -1,0 +1,28 @@
+﻿.about
+{
+    margin: 30px;
+    text-align: center;
+}
+
+.about .caixaTexto
+{
+    font-size: 15px;
+    color: White;
+    padding: 10px;
+    background-color:#2F4F4F;
+    -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #dbdbdb;
+    width: 500px;
+    align-content: center;
+    position:relative;
+    left:33%;
+}
+
+.about .caixaTexto .descricaoAbout
+{
+    font-family: Arial;
+    font-size: 15px;
+    text-align:justify;
+}

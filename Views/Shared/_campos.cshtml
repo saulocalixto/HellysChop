@@ -1,0 +1,21 @@
+﻿@model HelloWorld.Models.ItemModel
+
+    <table border="0" cellpadding="0" cellspacing="0" class="tabelaForm">
+    <tr>
+        <td>Nome:</td>
+        <td class="campoCadastro">
+            <input type="text" name="Nome" value="@Html.DisplayTextFor(x => x.Nome)" />
+        </td>
+    </tr>
+    <tr>
+        <td>Descrição:</td>
+        <td class="campoCadastro">@Html.TextAreaFor(x => x.Descricao)</td>
+    </tr>
+
+    <tr>
+        <td>Preço:</td>
+        <td class="campoCadastro">
+            <input type="number" step="0.01" min="0" name="Preco" value="@Html.DisplayTextFor(x => x.Preco)" />
+        </td>
+    </tr>
+</table>

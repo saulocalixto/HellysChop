@@ -1,0 +1,103 @@
+﻿/* Styles for IndexCardapio
+-----------------------------------------------------------*/
+
+.tituloBar
+{
+    text-align:center;
+}
+
+.blocoProdutos
+{
+    font-size: 15px;
+    padding: 30px;
+    background-color:#2F4F4F;
+    color: #FAEBD7;
+    -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #000000;
+    width: auto;
+    align-content: center;
+    left:40%;
+}
+
+.produtos
+{
+    text-align:center;
+    align-items:center;
+}
+
+.botao {
+	-moz-box-shadow: 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.botao:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+	background-color:#ffab23;
+}
+.botao:active {
+	position:relative;
+	top:1px;
+}
+
+.botao:link, .botao:visited {
+	text-decoration: none;
+    color: #333333;   
+}
+
+/* Styles for validation _listarItem */
+
+.campoNome 
+{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.wrapDescricao
+{
+    font-size: 15px;
+    color: White;
+    background-color:#4682B4;
+    -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #dbdbdb;
+    align-content: center;
+    position:relative;
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 10px;
+}
+
+.wrapDescricao .campoInformacao
+{
+    padding: 0px;
+}

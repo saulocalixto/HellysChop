@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Cardápio";
+}
+@model IEnumerable<HelloWorld.Models.ItemModel>
+    @section voltar
+    {
+        <div class="link-voltar">@Html.ActionLink("Voltar", "Index", "Home")</div>
+    }
+    <h1 class="tituloBar">Hellys Cardápio</h1>
+    <br />
+    
+    <div class="blocoProdutos">
+        <div><a class="botao" href='@Url.Action("IndexCadastro", "Item")'>Adicionar</a></div>
+
+        <div class="produtos">
+            @foreach (var item in Model)
+            {
+                @Html.Partial("_listarItem", item)
+            }
+            <br />
+            <div><a class="botao esconder" href="javascript:void(0);">Ocultar</a></div>
+        </div>
+    </div>
+    
+      
+                        
+        
+    

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Remover Produto";
+}
+
+@using HelloWorld.Models
+@model ItemModel
+
+<h2>Tem certeza que deseja remover o produto abaixo:</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("_campos", Model)
+
+    <input class="botao" type="submit" value="Remover" />
+}
