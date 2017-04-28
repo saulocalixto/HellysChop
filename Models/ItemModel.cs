@@ -9,13 +9,13 @@ namespace HelloWorld.Models
     {
         public ItemModel()
         {
-            Codigo = _Codigo;
-            _Codigo++;
+            //Codigo = _Codigo;
+            //_Codigo++;
         }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public string Preco { get; set; }
-        private static int _Codigo = 0;
+        //private static int _Codigo = 0;
         public int Codigo { get; set; }
         public TabelaNutricional TabelaNutricional { get; set; }
         public Nutriente NutrientePrincipal { get; set; }

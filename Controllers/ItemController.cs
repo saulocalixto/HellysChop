@@ -27,76 +27,76 @@ namespace HelloWorld.Controllers
         [HttpPost]
         public ActionResult IndexCadastro(ItemModel item)
         {
-            PersistenciaDoItem.Atual().Itens.Add(item);
+            //PersistenciaDoItem.Atual().Itens.Add(item);
             return View("IndexCadastroItem");
         }
 
-        public ActionResult Edit(int codigo)
-        {
-            ItemModel produto = new ItemModel();
-            foreach(var item in PersistenciaDoItem.Atual().Itens)
-            {
-                if(item.Codigo == codigo)
-                {
-                    produto = item;
-                }
-            }
-            return View("IndexCadastroItem", produto);
-        }
+        //public ActionResult Edit(int codigo)
+        //{
+        //    //ItemModel produto = new ItemModel();
+        //    //foreach(var item in PersistenciaDoItem.Atual().Itens)
+        //    //{
+        //    //    if(item.Codigo == codigo)
+        //    //    {
+        //    //        produto = item;
+        //    //    }
+        //    //}
+        //    //return View("IndexCadastroItem", produto);
+        //}
 
-        [HttpPost]
-        public ActionResult Edit(ItemModel produto, int codigo)
-        {
-            if(produto != null)
-            {
-                for (int i = 0; i < PersistenciaDoItem.Atual().Itens.Count; i++)
-                {
-                    if(codigo == PersistenciaDoItem.Atual().Itens[i].Codigo)
-                    {
-                        PersistenciaDoItem.Atual().Itens[i] = produto;
-                    }
-                }
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //public ActionResult Edit(ItemModel produto, int codigo)
+        //{
+        //    //if(produto != null)
+        //    //{
+        //    //    for (int i = 0; i < PersistenciaDoItem.Atual().Itens.Count; i++)
+        //    //    {
+        //    //        if(codigo == PersistenciaDoItem.Atual().Itens[i].Codigo)
+        //    //        {
+        //    //            PersistenciaDoItem.Atual().Itens[i] = produto;
+        //    //        }
+        //    //    }
+        //    //    return RedirectToAction("Index");
+        //    //}
+        //    //else
+        //    //{
+        //    //    return View();
+        //    //}
+        //}
 
-        public ActionResult Delete(int codigo)
-        {
-            ItemModel produto = new ItemModel();
-            foreach (var item in PersistenciaDoItem.Atual().Itens)
-            {
-                if (item.Codigo == codigo)
-                {
-                    produto = item;
-                }
-            }
-            return View("IndexDelete", produto);
-        }
+        //public ActionResult Delete(int codigo)
+        //{
+        //    //ItemModel produto = new ItemModel();
+        //    //foreach (var item in PersistenciaDoItem.Atual().Itens)
+        //    //{
+        //    //    if (item.Codigo == codigo)
+        //    //    {
+        //    //        produto = item;
+        //    //    }
+        //    //}
+        //    //return View("IndexDelete", produto);
+        //}
 
-        [HttpPost]
-        public ActionResult Delete(ItemModel produto, int codigo)
-        {
-            if (produto != null)
-            {
-                for (int i = 0; i < PersistenciaDoItem.Atual().Itens.Count; i++)
-                {
-                    if (codigo == PersistenciaDoItem.Atual().Itens[i].Codigo)
-                    {
-                        produto = PersistenciaDoItem.Atual().Itens[i];
-                        PersistenciaDoItem.Atual().Itens.Remove(produto);
-                    }
-                }
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //public ActionResult Delete(ItemModel produto, int codigo)
+        //{
+        //    //if (produto != null)
+        //    //{
+        //    //    for (int i = 0; i < PersistenciaDoItem.Atual().Itens.Count; i++)
+        //    //    {
+        //    //        if (codigo == PersistenciaDoItem.Atual().Itens[i].Codigo)
+        //    //        {
+        //    //            produto = PersistenciaDoItem.Atual().Itens[i];
+        //    //            PersistenciaDoItem.Atual().Itens.Remove(produto);
+        //    //        }
+        //    //    }
+        //    //    return RedirectToAction("Index");
+        //    //}
+        //    //else
+        //    //{
+        //    //    return View();
+        //    //}
+        //}
 
     }
 }
