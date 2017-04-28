@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HelloWorld.Models;
 using HelloWorld.Persistencia;
+using HelloWorld.Conexao;
 
 namespace HelloWorld.Controllers
 {
@@ -28,6 +29,9 @@ namespace HelloWorld.Controllers
         public ActionResult IndexCadastro(ItemModel item)
         {
             //PersistenciaDoItem.Atual().Itens.Add(item);
+            String StringSQL = "SELECT * FROM ITEM";
+            var con = new ConexaoBancoDeDados(StringSQL);
+            con.ObtenhaConexaoExecuteComando();
             return View("IndexCadastroItem");
         }
 

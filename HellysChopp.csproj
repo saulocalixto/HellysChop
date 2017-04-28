@@ -118,7 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexao\Conexao.cs" />
+    <Compile Include="Conexao\ConexaoBancoDeDados.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CardapioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
